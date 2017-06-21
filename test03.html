@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+		.container {
+			display: grid;
+			grid-gap: 10px;
+			height: 100vh;
+			/*grid-template-columns:
+      [left-sidebar-start] 20%
+      [left-sidebar-end main-content-start] 60%
+      [main-content-end right-sidebar-start] 20%
+      [right-sidebar-end];
+      grid-template-rows:
+      [bodyy-start] 80%
+      [body-end footer-start] 20%
+      [footer-end];*/
+      grid-template-columns:
+      [left-sidebar-start] 1fr
+      [left-sidebar-end main-content-start] 3fr
+      [main-content-end right-sidebar-start] 1fr
+      [right-sidebar-end];
+      grid-template-rows:
+      [bodyy-start] 3fr
+      [body-end footer-start] 1fr
+      [footer-end];
+		}
+
+		.container > * {
+      display: flex;
+			background: gold;
+			font-size: 40px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+		}
+
+    .footer {
+      /*grid-column: main-content-start/span 2;
+      grid-column: main-content-start/-1;*/
+      grid-column: main-content-start/right-sidebar-end;
+    }
+
+    .left-sidebar {
+      /*grid-row: bodyy-start / span 2;
+      grid-row: bodyy-start / -1;*/
+      grid-row: bodyy-start/ footer-end;
+    }
+
+
+		</style>
+		<title>Css grid layout page</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left-sidebar">left sidebar</div>
+			<div class="margin-content">main content</div>
+			<div class="right-sidebar">right sidebar</div>
+      <div class="footer">
+        footer
+      </div>
+		</div>
+	</body>
+
+</html>

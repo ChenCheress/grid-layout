@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+		.container {
+			display: grid;
+			grid-gap: 10px;
+			height: 100vh;
+      grid-template-columns: repeat(
+        auto-fit,/*3 if the values for this is 3, we will get 3 columns always*/
+        minmax(150px, auto)
+        );
+		}
+
+		.container > * {
+			background: orange;
+		}
+
+		</style>
+		<title>Css grid layout page</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box">a</div>
+      <div class="box">b</div>
+      <div class="box">c</div>
+		</div>
+	</body>
+</html>

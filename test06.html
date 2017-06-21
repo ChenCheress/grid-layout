@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style type="text/css">
+		.container {
+			display: grid;
+			grid-gap: 10px;
+			height: 100vh;
+      /*grid-template-columns: minmax(150px, auto) minmax(150px, auto);
+      grid-template-columns: minmax(150px, 300px) minmax(150px, auto);
+      grid-template-columns:
+        minmax(10%, 1fr)
+        minmax(150px, 3fr);*/
+      grid-template-columns:
+        minmax(min-content, 1fr)
+        minmax(max-content, 3fr);
+		}
+
+		.container > * {
+			background: mediumpurple;
+		}
+
+		</style>
+		<title>Css grid layout page</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box a">The example above is fine if the web page only contains two columns.
+
+However, we want to use a responsive grid-view with 12 columns, to have more control over the web page.
+
+First we must calculate the percentage for one column: 100% / 12 columns = 8.33%.</div>
+      <div class="box b">The example above is fine if the web page only contains two columns.</div>
+		</div>
+	</body>
+</html>
